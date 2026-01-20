@@ -2,6 +2,67 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from collections import Counter
+st.markdown("""
+<style>
+
+/* ===== GLOBAL BACKGROUND ===== */
+.stApp {
+    background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== MAIN TITLE ===== */
+h1 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* ===== SECTION CARDS ===== */
+.card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    animation: fadeUp 0.6s ease-in-out;
+}
+
+/* ===== METRIC CARDS ===== */
+.metric-card {
+    background: linear-gradient(135deg, #ffffff, #f1f5fb);
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+}
+.metric-card:hover {
+    transform: translateY(-4px);
+}
+
+/* ===== BUTTONS ===== */
+button {
+    border-radius: 12px !important;
+    transition: all 0.25s ease;
+}
+button:hover {
+    transform: scale(1.03);
+}
+
+/* ===== FADE UP ANIMATION ===== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+</style>
+""", unsafe_allow_html=True)
 
 from src.preprocessing import clean_text
 from src.sentiment_analysis import get_sentiment
@@ -39,19 +100,23 @@ tabs = st.tabs([
 
 # ================= OVERVIEW =================
 with tabs[0]:
+    st.markdown('<div class="card">', unsafe_allow_html=True)
+
     st.subheader("🔍 About ReviewScope")
     st.markdown("""
-    **ReviewScope** is a smart text analytics platform that helps users understand
-    large volumes of textual data by extracting:
-    - Sentiment trends
-    - Hidden discussion topics
-    - Frequently used keywords
-
-    **Use cases:**
-    - Product review analysis
-    - Customer feedback monitoring
-    - Opinion mining
+    **ReviewScope** is an AI-powered text intelligence platform designed to extract
+    actionable insights from large-scale customer feedback using Natural Language Processing.
     """)
+
+    st.markdown("""
+    **Core Capabilities**
+    - Sentiment Intelligence
+    - Topic Discovery
+    - Keyword Pattern Analysis
+    - Interactive Dashboards
+    """)
+
+    st.markdown('</div>', unsafe_allow_html=True)
 
 # ================= LIVE TEXT ANALYSIS =================
 with tabs[1]:
@@ -139,12 +204,24 @@ with tabs[3]:
 
 # ================= DASHBOARD =================
 with tabs[4]:
-    st.subheader("📊 Summary Dashboard")
+    st.markdown('<div class="card">', unsafe_allow_html=True)
+    st.subheader("📊 AI Insights Dashboard")
 
-    if "df" in locals():
-        colX, colY, colZ = st.columns(3)
-        colX.metric("Total Reviews", len(df))
-        colY.metric("Positive Reviews", (df["sentiment"] == "Positive").sum())
-        colZ.metric("Negative Reviews", (df["sentiment"] == "Negative").sum())
-    else:
-        st.info("No data available yet")
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.markdown('<div class="metric-card">', unsafe_allow_html=True)
+        st.metric("Total Reviews", len(df))
+        st.markdown('</div>', unsafe_allow_html=True)
+
+    with col2:
+        st.markdown('<div class="metric-card">', unsafe_allow_html=True)
+        st.metric("Positive Reviews", (df["sentiment"]=="Positive").sum())
+        st.markdown('</div>', unsafe_allow_html=True)
+
+    with col3:
+        st.markdown('<div class="metric-card">', unsafe_allow_html=True)
+        st.metric("Negative Reviews", (df["sentiment"]=="Negative").sum())
+        st.markdown('</div>', unsafe_allow_html=True)
+
+    st.markdown('</div>', unsafe_allow_html=True)
