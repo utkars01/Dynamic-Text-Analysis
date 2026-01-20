@@ -74,33 +74,32 @@ else:
             )
 
             with tab1:
-                st.subheader("Sentiment Distribution")
-                import matplotlib.pyplot as plt
+    st.subheader("Sentiment Overview")
 
-sentiment_counts = df["sentiment"].value_counts()
-
-colA, colB = st.columns(2)
-
-with colA:
-    st.subheader("Sentiment Percentage")
+    sentiment_counts = df["sentiment"].value_counts()
     sentiment_percent = (sentiment_counts / sentiment_counts.sum()) * 100
-    st.bar_chart(sentiment_percent)
 
-with colB:
-    st.subheader("Sentiment Distribution (Pie Chart)")
-    fig, ax = plt.subplots()
-    ax.pie(
-        sentiment_counts,
-        labels=sentiment_counts.index,
-        autopct="%1.1f%%",
-        startangle=90
-    )
-    ax.axis("equal")
-    st.pyplot(fig)
+    colA, colB = st.columns(2)
 
+    with colA:
+        st.subheader("📈 Sentiment Percentage")
+        st.bar_chart(sentiment_percent)
 
-                st.subheader("Sample Results")
-                st.dataframe(df[["review", "sentiment"]].head(10))
+    with colB:
+        st.subheader("🥧 Sentiment Distribution")
+        import matplotlib.pyplot as plt
+        fig, ax = plt.subplots()
+        ax.pie(
+            sentiment_counts,
+            labels=sentiment_counts.index,
+            autopct="%1.1f%%",
+            startangle=90
+        )
+        ax.axis("equal")
+        st.pyplot(fig)
+
+    st.subheader("📄 Sample Results")
+    st.dataframe(df[["review", "sentiment"]].head(10))
 
             with tab2:
                 st.subheader("Extracted Topics")
