@@ -1,22 +1,24 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+from collections import Counter
 
 from src.preprocessing import clean_text
 from src.sentiment_analysis import get_sentiment
 from src.topic_modeling import train_lda
 
+
 st.set_page_config(page_title="ReviewScope", layout="wide")
 
 st.title("📊 ReviewScope – Smart Review Analysis Platform")
-st.caption("Analyze customer reviews using sentiment analysis and topic modeling")
+st.caption("Analyze customer reviews using sentiment analysis, topic modeling, and keyword insights")
 
 
 st.subheader("📝 Instant Review Analysis")
 
 user_text = st.text_area(
     "Paste a review below",
-    placeholder="The product quality is amazing and delivery was fast."
+    placeholder="The product quality is excellent and delivery was very fast."
 )
 
 if st.button("🔍 Analyze Text"):
@@ -43,24 +45,29 @@ num_topics = st.sidebar.slider(
 run_button = st.sidebar.button("🚀 Run Dataset Analysis")
 
 
+def get_top_keywords(text_series, top_n=15):
+    words = " ".join(text_series).split()
+    return Counter(words).most_common(top_n)
+
+
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
 
     if "review" not in df.columns:
-        st.error("CSV must contain a column named 'review'")
+        st.error("❌ CSV must contain a column named 'review'")
     else:
         st.subheader("📄 Dataset Preview")
         st.dataframe(df.head())
 
         if run_button:
-            with st.spinner("Processing dataset..."):
+            with st.spinner("🔄 Processing dataset..."):
                 df["clean_text"] = df["review"].apply(clean_text)
                 df["sentiment"] = df["review"].apply(get_sentiment)
 
-            st.success("Dataset analysis completed")
+            st.success("✅ Dataset analysis completed")
 
-            tab1, tab2, tab3 = st.tabs(
-                ["😊 Sentiment Analysis", "🧠 Topic Modeling", "📊 Insights"]
+            tab1, tab2, tab3, tab4 = st.tabs(
+                ["😊 Sentiment Analysis", "🧠 Topic Modeling", "🔑 Keyword Overview", "📊 Insights"]
             )
 
             
@@ -94,25 +101,47 @@ if uploaded_file is not None:
             
             with tab2:
                 st.subheader("Extracted Topics")
+
                 lda, topics, coherence = train_lda(
                     df["clean_text"],
                     num_topics=num_topics
                 )
+
                 st.metric("Coherence Score", round(coherence, 3))
+
                 for topic in topics:
                     st.write(topic)
 
             
             with tab3:
-                colA, colB, colC = st.columns(3)
-                colA.metric("Total Reviews", len(df))
-                colB.metric(
+                st.subheader("🔑 Keyword Overview")
+
+                keywords = get_top_keywords(df["clean_text"], top_n=15)
+                keyword_df = pd.DataFrame(keywords, columns=["Keyword", "Frequency"])
+
+                colA, colB = st.columns(2)
+
+                with colA:
+                    st.subheader("Top Keywords (Frequency)")
+                    st.bar_chart(keyword_df.set_index("Keyword"))
+
+                with colB:
+                    st.subheader("Keyword Frequency Table")
+                    st.dataframe(keyword_df)
+
+            
+            with tab4:
+                colX, colY, colZ = st.columns(3)
+
+                colX.metric("Total Reviews", len(df))
+                colY.metric(
                     "Positive Reviews",
                     (df["sentiment"] == "Positive").sum()
                 )
-                colC.metric(
+                colZ.metric(
                     "Negative Reviews",
                     (df["sentiment"] == "Negative").sum()
                 )
+
 else:
     st.info("⬅️ Upload a CSV file from the sidebar to analyze a dataset")
