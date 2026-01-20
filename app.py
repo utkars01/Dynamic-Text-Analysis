@@ -127,7 +127,7 @@ with tabs[2]:
 with tabs[3]:
     st.subheader("🔑 Keyword Overview")
 
-    if "df" in locals():
+    if "df" in locals() and "clean_text" in df.columns:
         keywords = get_top_keywords(df["clean_text"])
         kw_df = pd.DataFrame(keywords, columns=["Keyword", "Frequency"])
 
@@ -137,7 +137,8 @@ with tabs[3]:
         with colB:
             st.dataframe(kw_df)
     else:
-        st.info("Run dataset analysis first")
+        st.info("Run dataset analysis first to generate keyword insights")
+
 
 # ================= DASHBOARD =================
 with tabs[4]:
