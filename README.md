@@ -110,20 +110,21 @@ Follow the steps below to run the project locally.
 ```bash
 git clone https://github.com/utkars01/ReviewScope.git
 cd ReviewScope
+```
+---
 
 ### 2️⃣ Install Dependencies
 
 ```bash
 pip install -r requirements.txt
+```
 
---------
-
+---
 ### 3️⃣ Run the Application
 
 ```bash
 streamlit run app.py
-
-
+```
 ---
 
 ## 👤 Author
