@@ -1,4 +1,4 @@
-# 📊 ReviewScope – Smart Review Analysis Platform
+<img width="1820" height="832" alt="dataset_analysis_1 png" src="https://github.com/user-attachments/assets/622850f4-4ff5-4d32-9b18-fd9ffd6332c6" /># 📊 ReviewScope – Smart Review Analysis Platform
 
 ReviewScope is a **high-end AI-powered web application** designed to extract **sentiment intelligence, thematic insights, and keyword patterns** from unstructured textual data.  
 The system provides both **instant single-text analysis** and **large-scale dataset analytics** through an interactive, product-grade user interface.
@@ -36,6 +36,7 @@ The system provides both **instant single-text analysis** and **large-scale data
 Provides a **high-level introduction** to the platform, its purpose, and core capabilities.
 
 
+<img width="962" height="778" alt="overview png" src="https://github.com/user-attachments/assets/55b26952-86cc-404d-ae15-2e6cdf52c2e1" />
 
 
 ---
@@ -44,6 +45,7 @@ Provides a **high-level introduction** to the platform, its purpose, and core ca
 
 Allows users to **paste any text** and instantly detect its sentiment.
 
+<img width="907" height="515" alt="single_text png" src="https://github.com/user-attachments/assets/b4a6985b-cd53-4024-8a79-3c796ce1ac9c" />
 
 
 ---
@@ -53,13 +55,17 @@ Allows users to **paste any text** and instantly detect its sentiment.
 Performs **bulk sentiment analysis** on uploaded CSV datasets with automated processing.
 
 
+<img width="1820" height="832" alt="dataset_analysis_1 png" src="https://github.com/user-attachments/assets/819beec4-fbf1-4ede-bde9-af583407fd27" />
+<img width="966" height="789" alt="dataset_analysis_2 png" src="https://github.com/user-attachments/assets/b8e8072e-fe24-4e6c-ac74-96d6f94701b2" />
 
 ---
+
 
 ### 🔑 Keyword Insights
 
 Displays the **most frequent keywords** extracted from the dataset.
 
+<img width="961" height="768" alt="keywords png" src="https://github.com/user-attachments/assets/4ee8de0a-44a0-4d37-8df8-e10124f28e07" />
 
 
 ---
