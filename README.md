@@ -99,17 +99,29 @@ An **icon-based KPI dashboard** summarizing analytical insights.
 
 ---
 
-
 ## ⚙️ Installation & Setup
+
+Follow the steps below to run the project locally.
+
+---
 
 ### 1️⃣ Clone Repository
 
 ```bash
 git clone https://github.com/utkars01/ReviewScope.git
 cd ReviewScope
-pip install -r requirements.txt
-streamlit run app.py
 
+### 2️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+
+--------
+
+### 3️⃣ Run the Application
+
+```bash
+streamlit run app.py
 
 
 ---
