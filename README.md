@@ -80,6 +80,29 @@ An **icon-based KPI dashboard** summarizing analytical insights.
 
 ---
 
+## 📁 Sample Dataset
+
+To help users quickly test the application, a **sample CSV dataset** is provided.
+
+### 📄 Sample File
+- **Filename:** `[amazon_reviews_labeled.csv](https://github.com/user-attachments/files/24766937/amazon_reviews_labeled.csv)
+`
+- **Description:** Contains example textual data suitable for sentiment and keyword analysis.
+
+### 🔽 Download
+You can download and use the sample dataset from the repository:
+
+---
+
+## 🌐 Live Application
+
+You can access the deployed web application using the link below:
+
+👉 **[Click Here to Open the App](https://dynamic-text-analysis-duhkvvjwjj8pfpbfnbkmqz.streamlit.app/)**
+
+
+---
+
 ## 🎨 User Interface & Experience
 
 - AI product-style design
