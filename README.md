@@ -69,6 +69,7 @@ Displays the **most frequent keywords** extracted from the dataset.
 An **icon-based KPI dashboard** summarizing analytical insights.
 
 
+<img width="960" height="771" alt="dashboard png" src="https://github.com/user-attachments/assets/d0c6ffb9-142c-49cd-b194-59e05b7682ca" />
 
 ---
 
