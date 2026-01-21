@@ -45,7 +45,7 @@ Provides a **high-level introduction** to the platform, its purpose, and core ca
 
 Allows users to **paste any text** and instantly detect its sentiment.
 
-<img width="907" height="515" alt="single_text png" src="https://github.com/user-attachments/assets/b4a6985b-cd53-4024-8a79-3c796ce1ac9c" />
+<img width="600" height="600" alt="single_text png" src="https://github.com/user-attachments/assets/b4a6985b-cd53-4024-8a79-3c796ce1ac9c" />
 
 
 ---
@@ -55,8 +55,7 @@ Allows users to **paste any text** and instantly detect its sentiment.
 Performs **bulk sentiment analysis** on uploaded CSV datasets with automated processing.
 
 
-<img width="1820" height="832" alt="dataset_analysis_1 png" src="https://github.com/user-attachments/assets/819beec4-fbf1-4ede-bde9-af583407fd27" />
-<img width="966" height="789" alt="dataset_analysis_2 png" src="https://github.com/user-attachments/assets/b8e8072e-fe24-4e6c-ac74-96d6f94701b2" />
+<img width="500" height="500" alt="dataset_analysis_1 png" src="https://github.com/user-attachments/assets/819beec4-fbf1-4ede-bde9-af583407fd27" /><img width="500" height="500" alt="dataset_analysis_2 png" src="https://github.com/user-attachments/assets/b8e8072e-fe24-4e6c-ac74-96d6f94701b2" />
 
 ---
 
@@ -65,7 +64,7 @@ Performs **bulk sentiment analysis** on uploaded CSV datasets with automated pro
 
 Displays the **most frequent keywords** extracted from the dataset.
 
-<img width="961" height="768" alt="keywords png" src="https://github.com/user-attachments/assets/4ee8de0a-44a0-4d37-8df8-e10124f28e07" />
+<img width="600" height="600" alt="keywords png" src="https://github.com/user-attachments/assets/4ee8de0a-44a0-4d37-8df8-e10124f28e07" />
 
 
 ---
@@ -75,7 +74,7 @@ Displays the **most frequent keywords** extracted from the dataset.
 An **icon-based KPI dashboard** summarizing analytical insights.
 
 
-<img width="960" height="771" alt="dashboard png" src="https://github.com/user-attachments/assets/d0c6ffb9-142c-49cd-b194-59e05b7682ca" />
+<img width="600" height="600" alt="dashboard png" src="https://github.com/user-attachments/assets/d0c6ffb9-142c-49cd-b194-59e05b7682ca" />
 
 ---
 
