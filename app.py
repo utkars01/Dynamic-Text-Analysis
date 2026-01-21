@@ -7,13 +7,13 @@ from src.preprocessing import clean_text
 from src.sentiment_analysis import get_sentiment
 from src.topic_modeling import train_lda
 
-# ================== PAGE CONFIG ==================
+
 st.set_page_config(
     page_title="ReviewScope – Smart Review Analysis Platform",
     layout="wide"
 )
 
-# ================== PREMIUM UI CSS ==================
+
 st.markdown("""
 <style>
 .stApp {
@@ -60,16 +60,16 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# ================== TITLE ==================
+
 st.title("📊 ReviewScope – Smart Review Analysis Platform")
 st.caption("A high-end AI web application for sentiment intelligence and text insights")
 
-# ================== HELPERS ==================
+
 def get_top_keywords(text_series, top_n=20):
     words = " ".join(text_series).split()
     return Counter(words).most_common(top_n)
 
-# ================== TABS ==================
+
 tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "🏠 Overview",
     "📝 Single Text Analysis",
@@ -78,7 +78,7 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "📊 Dashboard"
 ])
 
-# ================== OVERVIEW ==================
+
 with tab1:
     st.markdown('<div class="card">', unsafe_allow_html=True)
     st.subheader("🔍 About ReviewScope")
@@ -94,7 +94,7 @@ with tab1:
     """)
     st.markdown('</div>', unsafe_allow_html=True)
 
-# ================== SINGLE TEXT ANALYSIS ==================
+
 with tab2:
     st.markdown('<div class="card">', unsafe_allow_html=True)
     st.subheader("📝 Single Text Analysis")
@@ -108,7 +108,7 @@ with tab2:
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# ================== DATASET ANALYSIS ==================
+
 with tab3:
     st.markdown('<div class="card">', unsafe_allow_html=True)
     st.subheader("📂 Dataset Analysis")
@@ -170,7 +170,7 @@ with tab3:
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# ================== KEYWORD INSIGHTS ==================
+
 with tab4:
     st.markdown('<div class="card">', unsafe_allow_html=True)
     st.subheader("🔑 Keyword Insights")
@@ -189,7 +189,7 @@ with tab4:
 
     st.markdown('</div>', unsafe_allow_html=True)
 
-# ================== DASHBOARD (ICON KPI) ==================
+
 with tab5:
     if "df" in locals() and "sentiment" in df.columns:
 
