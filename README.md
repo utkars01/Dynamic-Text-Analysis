@@ -1,21 +1,112 @@
-# ReviewScope – Smart Review Analysis Platform
+# 📊 ReviewScope – Smart Review Analysis Platform
 
-ReviewScope is a web-based NLP application that analyzes large-scale textual data such as customer reviews. 
-The platform performs sentiment analysis and topic modeling to extract actionable insights.
+ReviewScope is a **high-end AI-powered web application** designed to extract **sentiment intelligence, thematic insights, and keyword patterns** from unstructured textual data.  
+The system provides both **instant single-text analysis** and **large-scale dataset analytics** through an interactive, product-grade user interface.
 
-## Features
-- CSV-based review upload
-- Text preprocessing
-- Sentiment classification (Positive, Neutral, Negative)
-- Topic modeling using LDA
-- Interactive web interface built with Streamlit
+---
 
-## Technologies Used
-- Python
-- Streamlit
-- NLTK
-- Gensim
-- Scikit-learn
+## 🚀 Key Highlights
 
-## Deployment
-The application is deployed on Streamlit Cloud and can be accessed via a public URL.
+- AI-driven **sentiment analysis**
+- Automated **topic modeling (LDA)**
+- **Keyword intelligence** from text corpora
+- **Icon-based KPI dashboards**
+- Professional, modern **web UI**
+- Cloud-deployable using **Streamlit**
+
+---
+
+## 🧠 Technology Stack
+
+- **Programming Language:** Python  
+- **Web Framework:** Streamlit  
+- **NLP & ML:** NLTK, Gensim, Scikit-learn  
+- **Data Handling:** Pandas, NumPy  
+- **Visualization:** Matplotlib, Seaborn  
+
+---
+
+
+## 🖥️ Application Features
+
+---
+
+### 🏠 Overview Page
+
+Provides a **high-level introduction** to the platform, its purpose, and core capabilities.
+
+
+
+
+---
+
+### 📝 Single Text Analysis
+
+Allows users to **paste any text** and instantly detect its sentiment.
+
+
+
+---
+
+### 📂 Dataset Analysis
+
+Performs **bulk sentiment analysis** on uploaded CSV datasets with automated processing.
+
+
+
+---
+
+### 🔑 Keyword Insights
+
+Displays the **most frequent keywords** extracted from the dataset.
+
+
+
+---
+
+### 📊 Dashboard (Executive View)
+
+An **icon-based KPI dashboard** summarizing analytical insights.
+
+
+
+---
+
+## 🎨 User Interface & Experience
+
+- AI product-style design
+- Gradient background & glass-effect cards
+- Icon-based KPI visualization
+- Clean and intuitive navigation
+
+
+
+---
+## 🔮 Future Enhancements
+
+- Emotion-level sentiment detection  
+- Multilingual text analysis  
+- Exportable analytical reports (CSV / PDF)  
+- Advanced topic visualization techniques  
+
+---
+
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/utkars01/ReviewScope.git
+cd ReviewScope
+
+pip install -r requirements.txt
+
+streamlit run app.py
+---
+
+
+## 👤 Author
+
+**Name:** Utkarsh Mishra  
+**Project Title:** ReviewScope – Smart Review Analysis Platform
+
